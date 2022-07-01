@@ -18,7 +18,7 @@ $subject = `$subject` . " | Scale ";
 $txt = "Name = " . $name . "\r\n Subject = " . $subject . "\r\n Email = "
     .  $email . "\r\n Message =" . $message;
 
-$headers = "From: Scale-Services@scaleservice." . "\r\n" .
+$headers = "From: Scale-Services@scaleservice.in" . "\r\n" .
     "BCC: me@divelink.in";;
 if ($email != NULL) {
     mail($to, $subject, $txt, $headers);
