@@ -8,7 +8,7 @@ $subject = $_POST['subject'];
 
 $message = $_POST['inputMessage'];
 
-$to = "princekumar2000.pks@gmail.com";
+$to = "scale@scaleservice.in";
 $subject = `$subject` . " | Scale ";
 
 // The following text will be sent
@@ -18,7 +18,7 @@ $subject = `$subject` . " | Scale ";
 $txt = "Name = " . $name . "\r\n Subject = " . $subject . "\r\n Email = "
     .  $email . "\r\n Message =" . $message;
 
-$headers = "From: scale@scaleservice." . "\r\n" .
+$headers = "From: Scale-Services@scaleservice." . "\r\n" .
     "BCC: me@divelink.in";;
 if ($email != NULL) {
     mail($to, $subject, $txt, $headers);
