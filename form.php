@@ -20,7 +20,7 @@ Thank You,
 Team SCALE.";
 
 $headers = "From: Scale-Services@scaleservice.in" . "\r\n" .
-    "BCC: me@divelink.in";
+    "BCC: me@divelink.in,getscaleservice@gmail.com";
 $headers2 = "From:Team-Scale@scaleservices.in" . "\r\n" .
     "BCC: me@divelink.in";
 if ($email != NULL) {
