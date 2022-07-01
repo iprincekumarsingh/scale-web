@@ -392,7 +392,7 @@ textarea:focus {
   -o-transition: 0.5s;
 }
 .sticky-menu .logo img {
-  max-width: 90%;
+  /* max-width: 90%; */
 }
 .sticky-menu .logo {
   /* padding: 20px 0; */
