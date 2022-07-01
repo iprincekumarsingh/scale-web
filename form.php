@@ -8,7 +8,7 @@ $subject = $_POST['subject'];
 
 $message = $_POST['inputMessage'];
 
-$to = "";
+$to = "princekumar2000.pks@gmail.com";
 $subject = `$subject` . " | Scale ";
 
 // The following text will be sent
