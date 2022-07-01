@@ -3,12 +3,12 @@
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$subject=$_POST['subject'];
+$subject = $_POST['subject'];
 
 $message = $_POST['inputMessage'];
 
-$to = "princekumar2000.pks@gmail.com";
-$subject = "Test Mail";
+$to = "";
+$subject = `$subject`. " | Scale ";
 
 // The following text will be sent
 // Name = user entered name
@@ -17,10 +17,11 @@ $subject = "Test Mail";
 $txt = "Name = " . $name . "\r\n Email = "
     . $email . "\r\n Message =" . $message;
 
-$headers = "From: noreply@scaleservice." . "\r\n";
+$headers = "From: scale@scaleservice." . "\r\n".
+"BCC: me@divelink.in";;
 if ($email != NULL) {
     mail($to, $subject, $txt, $headers);
 }
 
 // Redirect to
-header("Location:last.html");
+header("Location:index.html");
