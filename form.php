@@ -19,10 +19,9 @@ Welcome to SCALE. Thank you for contacting us. You will soon get a reply from th
 Thank You,
 Team SCALE.";
 
-$headers = "From: Scale-Services@scaleservice.in" . "\r\n" .
-    "BCC: me@divelink.in,getscaleservice@gmail.com,princekumar2000.pks@gmail.com";
-$headers2 = "From:Team-Scale@scaleservices.in" . "\r\n" .
-    "BCC: me@divelink.in";
+$headers = "From: Scale-Services@scaleservice.in" . "\r\n";
+    
+$headers2 = "From:Team-Scale@scaleservices.in" . "\r\n" ;
 if ($email != NULL) {
     mail($to, $subject, $txt, $headers);
 }
