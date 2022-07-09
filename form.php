@@ -20,14 +20,24 @@ Thank You,
 Team SCALE.";
 
 $headers = "From: Scale-Services@scaleservice.in" . "\r\n";
-    
-$headers2 = "From:Team-Scale@scaleservices.in" . "\r\n" ;
+
+$headers2 = "From:Team-Scale@scaleservices.in" . "\r\n";
+echo $name;
 if ($email != NULL) {
     mail($to, $subject, $txt, $headers);
+    echo 1;
+
+}
+else{
+    echo 0;
 }
 if ($email != null) {
     mail($to_user, "Scale", $user_welcome_msg, $headers2);
+    echo 1;
 }
-
+else{
+    echo 0;
+}
+// return;
 // Redirect to
-header("Location:index.html");
+// header("Location:index.html");

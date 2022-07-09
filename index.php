@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
+<?php session_start(); ?>
 
 <head>
     <meta charset="utf-8" />
@@ -9,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" href="images/logo/favicon-16x16.png" type="image/x-icon" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
     <!-- All css here -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -20,9 +22,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <style>
-        @media screen and (max-width: 767px){
-            .connected-info-text p span {width: 100px;}
-}
+        @media screen and (max-width: 767px) {
+            .connected-info-text p span {
+                width: 100px;
+            }
+        }
     </style>
 </head>
 
@@ -55,13 +59,11 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4">
                             <div class="logo d-inline-block">
-                                <a href="index.html"><img style="width: 200px" src="images/logo/logo.png"
-                                        alt="2020" /></a>
+                                <a href="index.html"><img style="width: 200px" src="images/logo/logo.png" alt="2020" /></a>
                             </div>
                         </div>
                         <!-- /col -->
-                        <div
-                            class="col-xl-8 col-lg-9 col-md-8 col-sm-8 col-8 d-flex align-items-center justify-content-end">
+                        <div class="col-xl-8 col-lg-9 col-md-8 col-sm-8 col-8 d-flex align-items-center justify-content-end">
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul class="d-block">
@@ -85,6 +87,19 @@
                         background: #3300ff;
                         color: white;" href="#contact">Contact Us</a>
                                         </li>
+                                        <?php
+                                        if (isset($_SESSION['id'])) {
+
+                                        ?>
+
+                                            <li>
+                                                <a href="#team">Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="logout.php">Logout</a>
+                                            </li>
+                                        <?php    }
+                                        ?>
                                     </ul>
                                 </nav>
                             </div>
@@ -94,8 +109,7 @@
                             <!-- social-link -->
 
                             <div class="d-block d-lg-none pl-25">
-                                <a class="mobile-menubar theme-color" href="javascript:void(0);"><i
-                                        class="far fa-bars"></i></a>
+                                <a class="mobile-menubar theme-color" href="javascript:void(0);"><i class="far fa-bars"></i></a>
                             </div>
                             <!-- <div class="mobile-menu"></div> -->
                         </div>
@@ -129,34 +143,20 @@
         <!-- ======slider-area-start=========================================== -->
         <div id="home" class="slider-area slider-area1 position-relative over-hidden">
             <div id="scene" class="position-absolute w-100 h-100 z-index11">
-                <img data-depth="0.20" class="shape shape-1 d-none d-lg-block" src="images/banner/shape/shape1.png"
-                    alt="#" />
-                <img data-depth="0.15" class="shape shape-2 sm-shape d-none d-lg-block"
-                    src="images/banner/shape/shape2.png" alt="#" />
-                <img data-depth="0.30" class="shape shape-3 d-none d-lg-block" src="images/banner/shape/shape3.png"
-                    alt="#" />
-                <img data-depth="0.10" class="shape shape-4 d-none d-lg-block" src="images/banner/shape/shape4.png"
-                    alt="#" />
-                <img data-depth="0.20" class="shape shape-5 sm-shape d-none d-lg-block"
-                    src="images/banner/shape/shape5.png" alt="#" />
-                <img data-depth="0.25" class="shape shape-6 d-none d-lg-block" src="images/banner/shape/shape6.png"
-                    alt="" />
-                <img data-depth="0.10" class="shape shape-7 d-none d-lg-block" src="images/banner/shape/shape7.png"
-                    alt="" />
-                <img data-depth="0.30" class="shape shape-8 d-none d-lg-block" src="images/banner/shape/shape8.png"
-                    alt="" />
-                <img data-depth="0.15" class="shape shape-9 d-none d-lg-block" src="images/banner/shape/shape9.png"
-                    alt="" />
-                <img data-depth="0.10" class="shape shape-10 sm-shape d-none d-lg-block"
-                    src="images/banner/shape/shape10.png" alt="" />
-                <img data-depth="0.20" class="shape shape-11 d-none d-lg-block" src="images/banner/shape/shape11.png"
-                    alt="" />
-                <img data-depth="0.15" class="shape shape-12 sm-shape d-none d-lg-block"
-                    src="images/banner/shape/shape10.png" alt="" />
-                <img data-depth="0.25" class="shape shape-13 sm-shape d-none d-lg-block"
-                    src="images/banner/shape/shape5.png" alt="" />
-                <img data-depth="0.10" class="shape shape-14 sm-shape d-none d-lg-block"
-                    src="images/banner/shape/shape5.png" alt="" />
+                <img data-depth="0.20" class="shape shape-1 d-none d-lg-block" src="images/banner/shape/shape1.png" alt="#" />
+                <img data-depth="0.15" class="shape shape-2 sm-shape d-none d-lg-block" src="images/banner/shape/shape2.png" alt="#" />
+                <img data-depth="0.30" class="shape shape-3 d-none d-lg-block" src="images/banner/shape/shape3.png" alt="#" />
+                <img data-depth="0.10" class="shape shape-4 d-none d-lg-block" src="images/banner/shape/shape4.png" alt="#" />
+                <img data-depth="0.20" class="shape shape-5 sm-shape d-none d-lg-block" src="images/banner/shape/shape5.png" alt="#" />
+                <img data-depth="0.25" class="shape shape-6 d-none d-lg-block" src="images/banner/shape/shape6.png" alt="" />
+                <img data-depth="0.10" class="shape shape-7 d-none d-lg-block" src="images/banner/shape/shape7.png" alt="" />
+                <img data-depth="0.30" class="shape shape-8 d-none d-lg-block" src="images/banner/shape/shape8.png" alt="" />
+                <img data-depth="0.15" class="shape shape-9 d-none d-lg-block" src="images/banner/shape/shape9.png" alt="" />
+                <img data-depth="0.10" class="shape shape-10 sm-shape d-none d-lg-block" src="images/banner/shape/shape10.png" alt="" />
+                <img data-depth="0.20" class="shape shape-11 d-none d-lg-block" src="images/banner/shape/shape11.png" alt="" />
+                <img data-depth="0.15" class="shape shape-12 sm-shape d-none d-lg-block" src="images/banner/shape/shape10.png" alt="" />
+                <img data-depth="0.25" class="shape shape-13 sm-shape d-none d-lg-block" src="images/banner/shape/shape5.png" alt="" />
+                <img data-depth="0.10" class="shape shape-14 sm-shape d-none d-lg-block" src="images/banner/shape/shape5.png" alt="" />
             </div>
             <!-- /shape-slider -->
             <div class="container">
@@ -164,8 +164,7 @@
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
                             <div class="slider-content mt-90 position-relative">
-                                <img class="slider-dotted position-absolute" src="images/banner/shape/banner-dotted.png"
-                                    alt="" />
+                                <img class="slider-dotted position-absolute" src="images/banner/shape/banner-dotted.png" alt="" />
 
 
                                 <h1 class="wow fadeInLeft f-700 pb-20">Welcome to SCALE</h1>
@@ -288,22 +287,19 @@
                                 <!-- /title -->
                                 <ul class="feature-text mt-50">
                                     <li class="d-flex">
-                                        <span class="feature-icon theme-color d-inline-block mr-20"><i
-                                                class="fal fa-check"></i></span>
+                                        <span class="feature-icon theme-color d-inline-block mr-20"><i class="fal fa-check"></i></span>
                                         <p>
                                             High quality videos for your brand
                                         </p>
                                     </li>
                                     <li class="d-flex">
-                                        <span class="feature-icon theme-color d-inline-block mr-20"><i
-                                                class="fal fa-check"></i></span>
+                                        <span class="feature-icon theme-color d-inline-block mr-20"><i class="fal fa-check"></i></span>
                                         <p>
                                             High quality and engaging videos
                                         </p>
                                     </li>
                                     <li class="d-flex">
-                                        <span class="feature-icon theme-color d-inline-block mr-20"><i
-                                                class="fal fa-check"></i></span>
+                                        <span class="feature-icon theme-color d-inline-block mr-20"><i class="fal fa-check"></i></span>
                                         <p>
                                             Best content in your niche
                                         </p>
@@ -342,8 +338,7 @@
                     <!-- /row -->
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                            <div class="single-product bg-white text-center pl-45 pr-45 pt-65 pb-50 mb-50 theme-border-b wow fadeInUp"
-                                data-wow-duration="1.2s">
+                            <div class="single-product bg-white text-center pl-45 pr-45 pt-65 pb-50 mb-50 theme-border-b wow fadeInUp" data-wow-duration="1.2s">
                                 <h5 class="f-700">#Instagram</h5>
                                 <div class="pro-icon mt-50 mb-45">
                                     <img width="66px" src="images/product/insta.png" alt="" />
@@ -361,8 +356,7 @@
                         </div>
                         <!-- /col -->
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm- col-">
-                            <div class="single-product bg-white text-center pl-45 pr-45 pt-65 pb-50 mb-50 theme-border-b wow fadeInUp"
-                                data-wow-duration="1.4s">
+                            <div class="single-product bg-white text-center pl-45 pr-45 pt-65 pb-50 mb-50 theme-border-b wow fadeInUp" data-wow-duration="1.4s">
                                 <h5 class="f-700">#Youtube</h5>
                                 <div class="pro-icon mt-50 mb-45">
                                     <img width="127px" src="images/product/youtube.png" alt="" />
@@ -380,8 +374,7 @@
                         </div>
                         <!-- /col -->
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm- col-">
-                            <div class="single-product bg-white text-center pl-45 pr-45 pt-65 pb-50 mb-50 theme-border-b wow fadeInUp"
-                                data-wow-duration="1.5s">
+                            <div class="single-product bg-white text-center pl-45 pr-45 pt-65 pb-50 mb-50 theme-border-b wow fadeInUp" data-wow-duration="1.5s">
                                 <h5 class="f-700">NFT</h5>
                                 <div class="pro-icon mt-50 mb-45">
                                     <img width="120px" src="images/product/nft.png" alt="" />
@@ -407,8 +400,7 @@
             </div>
             <!-- /product-area -->
             <!-- our-product-area-end  -->
-            <img class="f-img-bg w-100 position-absolute top-0 left-0 right-0 w-100 mt-50 mb-100 z-index-1"
-                src="images/feature/feature-bg.png" alt="" />
+            <img class="f-img-bg w-100 position-absolute top-0 left-0 right-0 w-100 mt-50 mb-100 z-index-1" src="images/feature/feature-bg.png" alt="" />
         </div>
         <!-- /feature-product-wrapper-bg -->
 
@@ -432,24 +424,20 @@
                         <!-- /service-content -->
                     </div>
                     <!-- /col -->
-                    <div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-5 col-md-4 offset-md-3 col-sm-5 offset-sm-1 col-12 wow fadeInRight"
-                        data-wow-duration="1.6s">
+                    <div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-5 col-md-4 offset-md-3 col-sm-5 offset-sm-1 col-12 wow fadeInRight" data-wow-duration="1.6s">
                         <div class="single-team-wrapper justify-content-center position-relative">
                             <div class="single-team d-md-flex justify-content-center mb-30">
                                 <div class="team-img position-relative">
                                     <img style="    border-radius: 50%;" src="images/team/team1.png" alt="" />
                                     <ul class="social-link text-center position-absolute">
                                         <li class="d-inline-block">
-                                            <a class="facebook-color text-center pl-10 pr-10 d-inline-block transition-3"
-                                                href="https://www.instagram.com/sanskarpani"><i class="fab fa-instagram"></i></a>
+                                            <a class="facebook-color text-center pl-10 pr-10 d-inline-block transition-3" href="https://www.instagram.com/sanskarpani"><i class="fab fa-instagram"></i></a>
                                         </li>
                                         <li class="d-inline-block">
-                                            <a class="twitter-color text-center pl-10 pr-10 d-inline-block transition-3"
-                                                href="https://twitter.com/sanskarpani"><i class="fab fa-twitter"></i></a>
+                                            <a class="twitter-color text-center pl-10 pr-10 d-inline-block transition-3" href="https://twitter.com/sanskarpani"><i class="fab fa-twitter"></i></a>
                                         </li>
                                         <li class="d-inline-block">
-                                            <a class="linkedin-color text-center pl-10 pr-10 d-inline-block transition-3"
-                                                href=" https://www.linkedin.com/in/sanskar-pani-5576741b7"><i class="fab fa-linkedin-in"></i></a>
+                                            <a class="linkedin-color text-center pl-10 pr-10 d-inline-block transition-3" href=" https://www.linkedin.com/in/sanskar-pani-5576741b7"><i class="fab fa-linkedin-in"></i></a>
                                         </li>
                                     </ul>
                                     <!-- social-link -->
@@ -505,8 +493,7 @@
                                     <span class="d-inline-block black-color f-700 pr-15">Phone</span>+91 9776936082
                                 </p>
                                 <p class="mb-10">
-                                    <span
-                                        class="d-inline-block black-color f-700 pr-15">Email</span>getscaleservice@gmail.com
+                                    <span class="d-inline-block black-color f-700 pr-15">Email</span>getscaleservice@gmail.com
                                 </p>
                             </div>
                         </div>
@@ -515,57 +502,35 @@
                     <!-- /col -->
                     <div class="col-xl-6 offset-xl-1 col-lg-7 col-md-12 col-sm-12 col-12">
                         <div class="contact-form">
-                            <form action="form.php"
-                                id="contact-form" method="POST">
+                            <form id="contact-form" method="POST">
                                 <div class="contact-info mt-10">
                                     <div class="row">
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-15 wow fadeInUp"
-                                            data-wow-duration="1.8s" data-delay=".5s">
-                                            <input
-                                                class="name w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg"
-                                                type="text" name="name" id="inputName" placeholder="Your Name"
-                                                required />
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-15 wow fadeInUp" data-wow-duration="1.8s" data-delay=".5s">
+                                            <input class="name w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg" type="text" name="name" id="name" placeholder="Your Name" required />
                                             <!-- /name -->
                                         </div>
                                         <!-- /col -->
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pl-sm-0 mb-15 wow fadeInUp"
-                                            data-wow-duration="1.8s" data-delay=".6s">
-                                            <input
-                                                class="email w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg"
-                                                type="email" name="email" id="inputEmail" placeholder="Your Email"
-                                                required />
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pl-sm-0 mb-15 wow fadeInUp" data-wow-duration="1.8s" data-delay=".6s">
+                                            <input class="email w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg" type="email" name="email" id="email" placeholder="Your Email" required />
                                             <!-- /name -->
                                         </div>
                                         <!-- /col -->
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-15 wow fadeInUp"
-                                            data-wow-duration="1.8s" data-delay=".8s">
-                                            <input
-                                                class="phone w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg"
-                                                type="text" name="phone" id="phone" placeholder="Your Phone" required />
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-15 wow fadeInUp" data-wow-duration="1.8s" data-delay=".8s">
+                                            <input class="phone w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg" type="text" name="phone" id="phone" placeholder="Your Phone" required />
                                             <!-- /name -->
                                         </div>
                                         <!-- /col -->
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pl-sm-0 mb-15 wow fadeInUp"
-                                            data-wow-duration="1.8s" data-delay=".8s">
-                                            <input
-                                                class="subject w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg"
-                                                type="text" name="subject" id="Subject" placeholder="Subject"
-                                                required />
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pl-sm-0 mb-15 wow fadeInUp" data-wow-duration="1.8s" data-delay=".8s">
+                                            <input class="subject w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg" type="text" name="subject" id="subject" placeholder="Subject" required />
                                             <!-- /name -->
                                         </div>
                                         <!-- /col -->
                                     </div>
                                     <!-- /row -->
                                     <div class="row no-gutters">
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pr3 w-100 wow fadeInUp"
-                                            data-wow-duration="1.8s" data-delay="1s">
-                                            <textarea
-                                                class="massage w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg"
-                                                name="inputMessage" id="inputMessage" placeholder="Write your message"
-                                                required></textarea>
-                                            <button
-                                                class="btn d-inline-block theme-bg theme-border2 white-text mt-20 text-capitalize right-0 top-0 bottom-0 wow fadeInUp wow fadeInUp"
-                                                data-wow-duration="1.8s" data-delay="1.3s" type="submit" name="submit">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pr3 w-100 wow fadeInUp" data-wow-duration="1.8s" data-delay="1s">
+                                            <textarea class="massage w-100 border-0 pl-20 ptb-17 pr-10 form-color border-radius10 primary-bg" name="inputMessage" id="message" placeholder="Write your message" required></textarea>
+                                            <button class="btn d-inline-block theme-bg theme-border2 white-text mt-20 text-capitalize right-0 top-0 bottom-0 wow fadeInUp wow fadeInUp" data-wow-duration="1.8s" data-delay="1.3s" type="submit" name="submit">
                                                 Submit Now
                                             </button>
                                         </div>
@@ -608,12 +573,10 @@
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <ul class="social-link text-center text-md-right mt-20">
                                 <li class="d-inline-block">
-                                    <a class="facebook-color text-center pl-15 d-inline-block transition-3" href="https://www.facebook.com/SCALE-112321381517133"><i
-                                            class="fab fa-facebook-f"></i></a>
+                                    <a class="facebook-color text-center pl-15 d-inline-block transition-3" href="https://www.facebook.com/SCALE-112321381517133"><i class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li class="d-inline-block">
-                                    <a class="facebook-color text-center pl-15 d-inline-block transition-3" href="https://www.instagram.com/scale.service/"><i
-                                            class="fab fa-instagram"></i></a>
+                                    <a class="facebook-color text-center pl-15 d-inline-block transition-3" href="https://www.instagram.com/scale.service/"><i class="fab fa-instagram"></i></a>
                                 </li>
                                 <!-- <li class="d-inline-block">
                       <a
@@ -622,10 +585,9 @@
                         ><i class="fab fa-twitter"></i
                       ></a>
                     </li> -->
-                               
+
                                 <li class="d-inline-block">
-                                    <a class="linkedin-color text-center pl-15 d-inline-block transition-3" href="https://www.linkedin.com/company/scaleservice/"><i
-                                            class="fab fa-linkedin-in"></i></a>
+                                    <a class="linkedin-color text-center pl-15 d-inline-block transition-3" href="https://www.linkedin.com/company/scaleservice/"><i class="fab fa-linkedin-in"></i></a>
                                 </li>
                             </ul>
                             <!-- social-link -->
@@ -640,6 +602,32 @@
         </div>
         </div>
     </footer>
+    <script>
+        $(document).ready(function() {
+            $("form").submit(function(event) {
+                var formData = {
+                    name: $("#name").val(),
+                    phone: $("#phone").val(),
+                    email: $("#email").val(),
+                    $message: $("#message").val(),
+                    $subject: $("#subject").val(),
+
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "form.php",
+                    data: formData,
+                    dataType: "json",
+
+                }).done(function(data) {
+                    console.log(data);
+                });
+
+                event.preventDefault();
+            });
+        });
+    </script>
     <!-- back top -->
     <div class="scroll-up" id="scroll">
         <a href="#" class="theme-bg text-white d-block text-center position-fixed mr-10 transition5">
