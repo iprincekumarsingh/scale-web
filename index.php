@@ -13,14 +13,14 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
     <!-- All css here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/slick.css" />
-    <link rel="stylesheet" href="css/meanmenu.css" />
-    <link rel="stylesheet" href="css/default.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="includes/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="includes/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="includes/css/animate.css" />
+    <link rel="stylesheet" href="includes/css/slick.css" />
+    <link rel="stylesheet" href="includes/css/meanmenu.css" />
+    <link rel="stylesheet" href="includes/css/default.css" />
+    <link rel="stylesheet" href="includes/css/style.css" />
+    <link rel="stylesheet" href="includes/css/responsive.css" />
     <style>
         @media screen and (max-width: 767px) {
             .connected-info-text p span {
@@ -59,7 +59,7 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4">
                             <div class="logo d-inline-block">
-                                <a href="index.html"><img style="width: 200px" src="images/logo/logo.png" alt="2020" /></a>
+                                <a href="index.php"><img style="width: 200px" src="includes/images/logo/logo.png" alt="2020" /></a>
                             </div>
                         </div>
                         <!-- /col -->
@@ -144,19 +144,19 @@
         <div id="home" class="slider-area slider-area1 position-relative over-hidden">
             <div id="scene" class="position-absolute w-100 h-100 z-index11">
                 <img data-depth="0.20" class="shape shape-1 d-none d-lg-block" src="images/banner/shape/shape1.png" alt="#" />
-                <img data-depth="0.15" class="shape shape-2 sm-shape d-none d-lg-block" src="images/banner/shape/shape2.png" alt="#" />
-                <img data-depth="0.30" class="shape shape-3 d-none d-lg-block" src="images/banner/shape/shape3.png" alt="#" />
-                <img data-depth="0.10" class="shape shape-4 d-none d-lg-block" src="images/banner/shape/shape4.png" alt="#" />
-                <img data-depth="0.20" class="shape shape-5 sm-shape d-none d-lg-block" src="images/banner/shape/shape5.png" alt="#" />
-                <img data-depth="0.25" class="shape shape-6 d-none d-lg-block" src="images/banner/shape/shape6.png" alt="" />
-                <img data-depth="0.10" class="shape shape-7 d-none d-lg-block" src="images/banner/shape/shape7.png" alt="" />
-                <img data-depth="0.30" class="shape shape-8 d-none d-lg-block" src="images/banner/shape/shape8.png" alt="" />
-                <img data-depth="0.15" class="shape shape-9 d-none d-lg-block" src="images/banner/shape/shape9.png" alt="" />
-                <img data-depth="0.10" class="shape shape-10 sm-shape d-none d-lg-block" src="images/banner/shape/shape10.png" alt="" />
-                <img data-depth="0.20" class="shape shape-11 d-none d-lg-block" src="images/banner/shape/shape11.png" alt="" />
-                <img data-depth="0.15" class="shape shape-12 sm-shape d-none d-lg-block" src="images/banner/shape/shape10.png" alt="" />
-                <img data-depth="0.25" class="shape shape-13 sm-shape d-none d-lg-block" src="images/banner/shape/shape5.png" alt="" />
-                <img data-depth="0.10" class="shape shape-14 sm-shape d-none d-lg-block" src="images/banner/shape/shape5.png" alt="" />
+                <img data-depth="0.15" class="shape shape-2 sm-shape d-none d-lg-block" src="includes/images/banner/shape/shape2.png" alt="#" />
+                <img data-depth="0.30" class="shape shape-3 d-none d-lg-block" src="includes/images/banner/shape/shape3.png" alt="#" />
+                <img data-depth="0.10" class="shape shape-4 d-none d-lg-block" src="includes/images/banner/shape/shape4.png" alt="#" />
+                <img data-depth="0.20" class="shape shape-5 sm-shape d-none d-lg-block" src="includes/images/banner/shape/shape5.png" alt="#" />
+                <img data-depth="0.25" class="shape shape-6 d-none d-lg-block" src="includes/images/banner/shape/shape6.png" alt="" />
+                <img data-depth="0.10" class="shape shape-7 d-none d-lg-block" src="includes/images/banner/shape/shape7.png" alt="" />
+                <img data-depth="0.30" class="shape shape-8 d-none d-lg-block" src="includes/images/banner/shape/shape8.png" alt="" />
+                <img data-depth="0.15" class="shape shape-9 d-none d-lg-block" src="includes/images/banner/shape/shape9.png" alt="" />
+                <img data-depth="0.10" class="shape shape-10 sm-shape d-none d-lg-block" src="includes/images/banner/shape/shape10.png" alt="" />
+                <img data-depth="0.20" class="shape shape-11 d-none d-lg-block" src="includes/images/banner/shape/shape11.png" alt="" />
+                <img data-depth="0.15" class="shape shape-12 sm-shape d-none d-lg-block" src="includes/images/banner/shape/shape10.png" alt="" />
+                <img data-depth="0.25" class="shape shape-13 sm-shape d-none d-lg-block" src="includes/images/banner/shape/shape5.png" alt="" />
+                <img data-depth="0.10" class="shape shape-14 sm-shape d-none d-lg-block" src="includes/images/banner/shape/shape5.png" alt="" />
             </div>
             <!-- /shape-slider -->
             <div class="container">
@@ -164,7 +164,7 @@
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
                             <div class="slider-content mt-90 position-relative">
-                                <img class="slider-dotted position-absolute" src="images/banner/shape/banner-dotted.png" alt="" />
+                                <img class="slider-dotted position-absolute" src="includes/images/banner/shape/banner-dotted.png" alt="" />
 
 
                                 <h1 class="wow fadeInLeft f-700 pb-20">Welcome to SCALE</h1>
@@ -179,14 +179,14 @@
                         <!-- /col -->
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10 col-12 d-flex align-items-center">
                             <div class="slider-img1 wow fadeInRight" data-wow-duration="1.5s">
-                                <img class="bounce-animate" src="images/banner/slider-img.png" alt="" />
+                                <img class="bounce-animate" src="includes/images/banner/slider-img.png" alt="" />
                             </div>
                         </div>
                         <!-- /col -->
                     </div>
                     <!-- /row -->
                     <div class="slider-bg">
-                        <img class="w-100 z-index-1" src="images/banner/bg.png" alt="" />
+                        <img class="w-100 z-index-1" src="includes/images/banner/bg.png" alt="" />
                     </div>
                     <!-- /slider-bg -->
                 </div>
@@ -201,7 +201,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-5 offset-xl-0 col-lg-5 offset-lg-0 col-md-10 offset-md-1 col-sm-12 col-12">
                         <div class="about-img text-center wow fadeInLeft" data-wow-duration="1.6s">
-                            <img src="images/bg/about-img.png" alt="" />
+                            <img src="includes/images/bg/about-img.png" alt="" />
                         </div>
                         <!-- /about-img -->
                     </div>
@@ -274,7 +274,7 @@
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="feature-img wow fadeInLeft" data-wow-duration="1.6s">
-                                <img src="images/feature/feature-img.png" alt="" />
+                                <img src="includes/images/feature/feature-img.png" alt="" />
                             </div>
                             <!-- /service-img -->
                         </div>
@@ -320,7 +320,7 @@
             <div id="product" class="product-area pt-110 pb-260 over-hidden">
                 <div class="container position-relative">
                     <div class="product-bg">
-                        <img src="images/product/product-bg.png" alt="" />
+                        <img src="includes/images/product/product-bg.png" alt="" />
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-xl-6 col-lg-7 col-md-8 col-sm-12 col-12">
@@ -341,7 +341,7 @@
                             <div class="single-product bg-white text-center pl-45 pr-45 pt-65 pb-50 mb-50 theme-border-b wow fadeInUp" data-wow-duration="1.2s">
                                 <h5 class="f-700">#Instagram</h5>
                                 <div class="pro-icon mt-50 mb-45">
-                                    <img width="66px" src="images/product/insta.png" alt="" />
+                                    <img width="66px" src="includes/images/product/insta.png" alt="" />
                                 </div>
                                 <p>
                                     Instagram Account Handling, Content Creation,<br />
@@ -359,7 +359,7 @@
                             <div class="single-product bg-white text-center pl-45 pr-45 pt-65 pb-50 mb-50 theme-border-b wow fadeInUp" data-wow-duration="1.4s">
                                 <h5 class="f-700">#Youtube</h5>
                                 <div class="pro-icon mt-50 mb-45">
-                                    <img width="127px" src="images/product/youtube.png" alt="" />
+                                    <img width="127px" src="includes/images/product/youtube.png" alt="" />
                                 </div>
                                 <p>
                                     Content Research, Youtube Ads management, Thumbnail Design,
@@ -377,7 +377,7 @@
                             <div class="single-product bg-white text-center pl-45 pr-45 pt-65 pb-50 mb-50 theme-border-b wow fadeInUp" data-wow-duration="1.5s">
                                 <h5 class="f-700">NFT</h5>
                                 <div class="pro-icon mt-50 mb-45">
-                                    <img width="120px" src="images/product/nft.png" alt="" />
+                                    <img width="120px" src="includes/images/product/nft.png" alt="" />
                                 </div>
                                 <p>
                                     Marketing,<br />
@@ -400,7 +400,7 @@
             </div>
             <!-- /product-area -->
             <!-- our-product-area-end  -->
-            <img class="f-img-bg w-100 position-absolute top-0 left-0 right-0 w-100 mt-50 mb-100 z-index-1" src="images/feature/feature-bg.png" alt="" />
+            <img class="f-img-bg w-100 position-absolute top-0 left-0 right-0 w-100 mt-50 mb-100 z-index-1" src="includes/images/feature/feature-bg.png" alt="" />
         </div>
         <!-- /feature-product-wrapper-bg -->
 
@@ -428,7 +428,7 @@
                         <div class="single-team-wrapper justify-content-center position-relative">
                             <div class="single-team d-md-flex justify-content-center mb-30">
                                 <div class="team-img position-relative">
-                                    <img style="    border-radius: 50%;" src="images/team/team1.png" alt="" />
+                                    <img style="    border-radius: 50%;" src="includes/images/team/team1.png" alt="" />
                                     <ul class="social-link text-center position-absolute">
                                         <li class="d-inline-block">
                                             <a class="facebook-color text-center pl-10 pr-10 d-inline-block transition-3" href="https://www.instagram.com/sanskarpani"><i class="fab fa-instagram"></i></a>
@@ -636,17 +636,17 @@
     </div>
 
     <!-- All js here -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/one-page-nav-min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/jquery.meanmenu.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="includes/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="includes/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="includes/js/popper.min.js"></script>
+    <script src="includes/js/bootstrap.min.js"></script>
+    <script src="includes/js/parallax.js"></script>
+    <script src="includes/js/one-page-nav-min.js"></script>
+    <script src="includes/js/slick.min.js"></script>
+    <script src="includes/js/wow.min.js"></script>
+    <script src="includes/js/plugins.js"></script>
+    <script src="includes/js/jquery.meanmenu.min.js"></script>
+    <script src="includes/js/main.js"></script>
 </body>
 
 <!-- Mirrored from ethemestudio.com/demo/2050/2050-html-template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Jul 2022 03:10:18 GMT -->
